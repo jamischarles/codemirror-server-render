@@ -1,3 +1,10 @@
+/* Base styles needed for the editor to look functional and work with the gutter. 
+On the clientside these are set here as part of the base theme.
+https://github.com/codemirror/view/blob/main/src/theme.ts
+
+Feel free to use / override / remove
+*/
+
 .cm-editor {
   display: flex !important; 
   flex-direction: column;

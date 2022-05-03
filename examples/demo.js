@@ -37,7 +37,6 @@ function sub(a,b){
 `;
   
   var result = renderString(code, oneDarkHighlightStyle, oneDarkTheme, {lineNumbers: true});
-  // console.log('result', result);
 
   // base css I've stolen from codeMirror needed for basic styles to look good
   const baseEditorCSS = fs.readFileSync('./base-theme.css');

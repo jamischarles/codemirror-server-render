@@ -4,36 +4,17 @@ import {oneDarkHighlightStyle, oneDarkTheme } from '@codemirror/theme-one-dark'
 import {renderString} from "./index.js";
 
 
-import {EditorView} from "@codemirror/view"
-
-// This again produces an extension value
-let myBaseTheme = EditorView.theme({
-  ".dark .cm-mySelector": { background: "dimgrey" },
-  ".light .cm-mySelector": { background: "ghostwhite" }
-})
-
-
-
-console.log('baseTheme', EditorView.baseTheme);
-console.log('baseTheme', EditorView.baseTheme.value);
-
-console.log('#@EditorView', EditorView.theme());
-console.log('@EditorView.baseTheme', EditorView.baseTheme());
-
-// console.log(myBaseTheme)
-// we can get the added ones. But where are the DEFAULT theme?
-// console.log('####baseTheme', myBaseTheme[1].value?.getRules?.());
 
 
 // test string render
-function test1() {
+function testTheme() {
   var code = `function add(a,b){
   return a+b;
 } 
 // amazing comment!`;
 
-let result = renderString(code, oneDarkHighlightStyle, oneDarkTheme);
-console.log('result', result);
+let result = renderString(code, oneDarkHighlightStyle, oneDarkTheme, {lineNumbers: true});
+// console.log('result', result);
 
   const html = `
     <head>
@@ -49,14 +30,14 @@ console.log('result', result);
   
 }
 
-function test2() {
+function testRenderWithDefaults() {
   var code = `function add(a,b){
   return a+b;
 } 
 // amazing comment!`;
 
 let result = renderString(code);
-console.log('result', result);
+// console.log('result', result);
 
   const html = `
     <head>
@@ -85,7 +66,7 @@ function testAnotherLanguage() {
 `;
 
 let result = renderString(`alert("hello")`, oneDarkHighlightStyle, oneDarkTheme, {langProvider: htmlLanguage});
-console.log('result', result);
+// console.log('result', result);
 
   const html = `
     <head>
@@ -105,8 +86,8 @@ console.log('result', result);
 
 }
 
-test1();
-test2();
+testTheme();
+testRenderWithDefaults();
 testAnotherLanguage();
 
 

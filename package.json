@@ -16,6 +16,10 @@
   ],
   "author": "Jamis Charles",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamischarles/codemirror-server-render.git"
+  },
   "dependencies": {
     "@codemirror/basic-setup": "^0.20.0",
     "@codemirror/lang-html": "^0.20.0",
