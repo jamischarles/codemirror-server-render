@@ -1,0 +1,63 @@
+.cm-editor {
+  display: flex !important; 
+  flex-direction: column;
+}
+.cm-editor .cm-scroller {
+  display: flex !important; 
+  align-items: flex-start !important;
+	font-family: monospace;
+	overflow-x: auto;
+  position: relative;
+}
+
+.cm-editor .cm-content {
+  box-sizing: border-box;
+  margin: 0;
+/*   min-height: 100%; */ /* For full height of viewport, not of content */
+  padding: 10px 0 10px 8px; /* This top padding needs to match the gutter top padding so line numbers line up */
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.cm-editor .cm-line {
+  padding: 0 2px 0 6px;
+}
+
+.cm-gutters {
+  padding-top: 10px; /* MUST be same as .cm-content */
+}
+
+.cm-gutter {
+  display: flex !important; /* Necessary -- prevents margin collapsing */
+  flex-direction: column;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.cm-lineNumbers .cm-gutterElement {
+  padding: 0 3px 0 5px;
+  min-width: 20px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+  
+
+
+/* Suggested Editor Styles */
+.cm-editor {
+  width: 400px;
+
+  /* For limiting height */
+/*   height: 100px; 
+  overflow-y: auto; */
+}
+
+.cm-editor .cm-scroller {
+  font-size: .85rem;
+  line-height: 1.4;
+}
+
+

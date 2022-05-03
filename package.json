@@ -1,0 +1,30 @@
+{
+  "name": "codemirror-server-render",
+  "version": "1.0.0",
+  "description": "Generates CodeMirror 6 markup as a string for server side and build time rendering (SSR).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node examples/demo.js"
+  },
+  "keywords": [
+    "CodeMirror6",
+    "SSR",
+    "server side render",
+    "server render"
+  ],
+  "author": "Jamis Charles",
+  "license": "ISC",
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.20.0",
+    "@codemirror/lang-html": "^0.20.0",
+    "@codemirror/lang-javascript": "^0.20.0",
+    "@codemirror/language": "^0.20.0",
+    "@codemirror/rangeset": "^0.19.9",
+    "@codemirror/text": "^0.19.6",
+    "@codemirror/theme-one-dark": "^0.20.0",
+    "@codemirror/view": "^0.20.3",
+    "@lezer/highlight": "^0.16.0"
+  }
+}
