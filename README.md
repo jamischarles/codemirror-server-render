@@ -28,7 +28,7 @@ renderString( "alert('hello')" ); // default theme, default language (js). Retur
 
 ## Examples
 ### Default styles, default language (JavaScript)
-<img src="./screenshots/default_theme.png" width="200px" />
+<img src="./screenshots/default_theme.png"  />
 
 ```js
 import { renderString } from "codemirror-server-render";
@@ -55,7 +55,7 @@ let result = renderString(code);
 ```
 
 ### `One-dark` theme and `html` language. LineNumbers enabled
-<img src="./screenshots/dark_theme.png" width="200px" />
+<img src="./screenshots/dark_theme.png"  />
 
 ```js
 import { htmlLanguage } from '@codemirror/lang-html';
