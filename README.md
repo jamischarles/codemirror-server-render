@@ -1,5 +1,6 @@
-# Codemirror-server-render
-Renders codemirror syntax highlighting as a string so you can use it at build time (ie: blog) or server-side.
+# CodeMirror-server-render (CodeMirror 6)
+Renders CodeMirror 6 syntax highlighting as a string so you can use it at build time (ie: blog) or server-side.
+Verified to work with latest CM6 `0.20` themes.
 
 ## Installation
 `npm install codemirror-server-render`
