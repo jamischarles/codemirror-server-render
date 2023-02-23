@@ -5,7 +5,9 @@
 
 // TODO: Make this TS
 import fs from "node:fs";
-import {resolve} from 'node:path'
+import {join} from 'node:path'
+ import * as url from 'node:url';
+
 import { highlightTree } from "@lezer/highlight";
 import { javascriptLanguage } from "@codemirror/lang-javascript";
 import { Decoration } from "@codemirror/view";
@@ -13,8 +15,11 @@ import { RangeSetBuilder, Text } from "@codemirror/state";
 
 // Styles
 import { defaultHighlightStyle } from "@codemirror/language";
-const baseEditorStyles = fs.readFileSync(resolve("./base-theme.css")); //
-// console.log('resolve("./base-theme.css"', resolve("./base-theme.css"));
+
+// esm __dirname equivalent
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+const baseEditorStyles = fs.readFileSync(join(__dirname, "./base-theme.css")); //
+// console.log('resolve("./base-theme.css"', join(__dirname, "./base-theme.css"));
 export function renderString(
   code,
   highlightStyle = defaultHighlightStyle,
