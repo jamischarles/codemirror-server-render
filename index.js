@@ -4,7 +4,8 @@
  */
 
 // TODO: Make this TS
-import fs from "fs";
+import fs from "node:fs";
+import {resolve} from 'node:path'
 import { highlightTree } from "@lezer/highlight";
 import { javascriptLanguage } from "@codemirror/lang-javascript";
 import { Decoration } from "@codemirror/view";
@@ -12,8 +13,8 @@ import { RangeSetBuilder, Text } from "@codemirror/state";
 
 // Styles
 import { defaultHighlightStyle } from "@codemirror/language";
-const baseEditorStyles = fs.readFileSync("./base-theme.css"); //
-
+const baseEditorStyles = fs.readFileSync(resolve("./base-theme.css")); //
+// console.log('resolve("./base-theme.css"', resolve("./base-theme.css"));
 export function renderString(
   code,
   highlightStyle = defaultHighlightStyle,
