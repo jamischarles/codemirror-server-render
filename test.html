@@ -1,0 +1,186 @@
+html:js 
+    <head>
+      <style>.ͼo {color: #abb2bf; background-color: #282c34;}
+.ͼo .cm-content {caret-color: #528bff;}
+.ͼo .cm-cursor, .ͼo .cm-dropCursor {border-left-color: #528bff;}
+.ͼo.cm-focused .cm-selectionBackground, .ͼo .cm-selectionBackground, .ͼo .cm-content ::selection {background-color: #3E4451;}
+.ͼo .cm-panels {background-color: #21252b; color: #abb2bf;}
+.ͼo .cm-panels.cm-panels-top {border-bottom: 2px solid black;}
+.ͼo .cm-panels.cm-panels-bottom {border-top: 2px solid black;}
+.ͼo .cm-searchMatch {background-color: #72a1ff59; outline: 1px solid #457dff;}
+.ͼo .cm-searchMatch.cm-searchMatch-selected {background-color: #6199ff2f;}
+.ͼo .cm-activeLine {background-color: #6699ff0b;}
+.ͼo .cm-selectionMatch {background-color: #aafe661a;}
+.ͼo.cm-focused .cm-matchingBracket, .ͼo.cm-focused .cm-nonmatchingBracket {background-color: #bad0f847; outline: 1px solid #515a6b;}
+.ͼo .cm-gutters {background-color: #282c34; color: #7d8799; border: none;}
+.ͼo .cm-activeLineGutter {background-color: #2c313a;}
+.ͼo .cm-foldPlaceholder {background-color: transparent; border: none; color: #ddd;}
+.ͼo .cm-tooltip {border: none; background-color: #353a42;}
+.ͼo .cm-tooltip .cm-tooltip-arrow:before {border-top-color: transparent; border-bottom-color: transparent;}
+.ͼo .cm-tooltip .cm-tooltip-arrow:after {border-top-color: #353a42; border-bottom-color: #353a42;}
+.ͼo .cm-tooltip-autocomplete > ul > li[aria-selected] {background-color: #2c313a; color: #abb2bf;}
+.ͼp {color: #c678dd;}
+.ͼq {color: #e06c75;}
+.ͼr {color: #61afef;}
+.ͼs {color: #d19a66;}
+.ͼt {color: #abb2bf;}
+.ͼu {color: #e5c07b;}
+.ͼv {color: #56b6c2;}
+.ͼw {color: #7d8799;}
+.ͼx {font-weight: bold;}
+.ͼy {font-style: italic;}
+.ͼz {text-decoration: line-through;}
+.ͼ10 {color: #7d8799; text-decoration: underline;}
+.ͼ11 {font-weight: bold; color: #e06c75;}
+.ͼ12 {color: #d19a66;}
+.ͼ13 {color: #98c379;}
+.ͼ14 {color: #ffffff;}</style>
+    </head>
+
+    <body>
+      <div class="cm-editor gutter ͼo"><div class="cm-scroller"><div class="cm-gutters">
+    <div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement">1</div><div class="cm-gutterElement">2</div><div class="cm-gutterElement">3</div><div class="cm-gutterElement">4</div></div>
+    </div><div class="cm-content"><div class="cm-line"><span class="ͼp">function</span> <span class="ͼr">add</span>(<span class="ͼt">a</span><span class="ͼt">,</span><span class="ͼt">b</span>){</div><div class="cm-line">  <span class="ͼp">return</span> <span class="ͼq">a</span><span class="ͼv">+</span><span class="ͼq">b</span><span class="ͼt">;</span></div><div class="cm-line">} </div><div class="cm-line"><span class="ͼw">// amazing comment!</span></div></div></div></div>
+  </body>
+  
+##default-html:js 
+    <head>
+      <style>.ͼ5 {color: #404740;}
+.ͼ6 {text-decoration: underline;}
+.ͼ7 {text-decoration: underline; font-weight: bold;}
+.ͼ8 {font-style: italic;}
+.ͼ9 {font-weight: bold;}
+.ͼa {text-decoration: line-through;}
+.ͼb {color: #708;}
+.ͼc {color: #219;}
+.ͼd {color: #164;}
+.ͼe {color: #a11;}
+.ͼf {color: #e40;}
+.ͼg {color: #00f;}
+.ͼh {color: #30a;}
+.ͼi {color: #085;}
+.ͼj {color: #167;}
+.ͼk {color: #256;}
+.ͼl {color: #00c;}
+.ͼm {color: #940;}
+.ͼn {color: #f00;}</style>
+    </head>
+
+    <body>
+      <div class="cm-editor  "><div class="cm-scroller"><div class="cm-content"><div class="cm-line"><span class="ͼb">function</span> <span class="ͼg">add</span>(<span class="ͼg">a</span>,<span class="ͼg">b</span>){</div><div class="cm-line">  <span class="ͼb">return</span> a+b;</div><div class="cm-line">} </div><div class="cm-line"><span class="ͼm">// amazing comment!</span></div></div></div></div>
+  </body>
+  
+html:html 
+    <head>
+      <style>/* Base styles needed for the editor to look functional and work with the gutter. 
+On the clientside these are set here as part of the base theme.
+https://github.com/codemirror/view/blob/main/src/theme.ts
+
+Feel free to use / override / remove
+*/
+
+.cm-editor {
+  display: flex !important; 
+  flex-direction: column;
+}
+.cm-editor .cm-scroller {
+  display: flex !important; 
+  align-items: flex-start !important;
+	font-family: monospace;
+	overflow-x: auto;
+  position: relative;
+}
+
+.cm-editor .cm-content {
+  box-sizing: border-box;
+  margin: 0;
+/*   min-height: 100%; */ /* For full height of viewport, not of content */
+  padding: 10px 0 10px 8px; /* This top padding needs to match the gutter top padding so line numbers line up */
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.cm-editor .cm-line {
+  padding: 0 2px 0 6px;
+}
+
+.cm-gutters {
+  padding-top: 10px; /* MUST be same as .cm-content */
+}
+
+.cm-gutter {
+  display: flex !important; /* Necessary -- prevents margin collapsing */
+  flex-direction: column;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.cm-lineNumbers .cm-gutterElement {
+  padding: 0 3px 0 5px;
+  min-width: 20px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+  
+
+
+/* Suggested Editor Styles */
+.cm-editor {
+  width: 400px;
+
+  /* For limiting height */
+/*   height: 100px; 
+  overflow-y: auto; */
+}
+
+.cm-editor .cm-scroller {
+  font-size: .85rem;
+  line-height: 1.4;
+}
+
+
+</style>
+      <style>.ͼo {color: #abb2bf; background-color: #282c34;}
+.ͼo .cm-content {caret-color: #528bff;}
+.ͼo .cm-cursor, .ͼo .cm-dropCursor {border-left-color: #528bff;}
+.ͼo.cm-focused .cm-selectionBackground, .ͼo .cm-selectionBackground, .ͼo .cm-content ::selection {background-color: #3E4451;}
+.ͼo .cm-panels {background-color: #21252b; color: #abb2bf;}
+.ͼo .cm-panels.cm-panels-top {border-bottom: 2px solid black;}
+.ͼo .cm-panels.cm-panels-bottom {border-top: 2px solid black;}
+.ͼo .cm-searchMatch {background-color: #72a1ff59; outline: 1px solid #457dff;}
+.ͼo .cm-searchMatch.cm-searchMatch-selected {background-color: #6199ff2f;}
+.ͼo .cm-activeLine {background-color: #6699ff0b;}
+.ͼo .cm-selectionMatch {background-color: #aafe661a;}
+.ͼo.cm-focused .cm-matchingBracket, .ͼo.cm-focused .cm-nonmatchingBracket {background-color: #bad0f847; outline: 1px solid #515a6b;}
+.ͼo .cm-gutters {background-color: #282c34; color: #7d8799; border: none;}
+.ͼo .cm-activeLineGutter {background-color: #2c313a;}
+.ͼo .cm-foldPlaceholder {background-color: transparent; border: none; color: #ddd;}
+.ͼo .cm-tooltip {border: none; background-color: #353a42;}
+.ͼo .cm-tooltip .cm-tooltip-arrow:before {border-top-color: transparent; border-bottom-color: transparent;}
+.ͼo .cm-tooltip .cm-tooltip-arrow:after {border-top-color: #353a42; border-bottom-color: #353a42;}
+.ͼo .cm-tooltip-autocomplete > ul > li[aria-selected] {background-color: #2c313a; color: #abb2bf;}
+.ͼp {color: #c678dd;}
+.ͼq {color: #e06c75;}
+.ͼr {color: #61afef;}
+.ͼs {color: #d19a66;}
+.ͼt {color: #abb2bf;}
+.ͼu {color: #e5c07b;}
+.ͼv {color: #56b6c2;}
+.ͼw {color: #7d8799;}
+.ͼx {font-weight: bold;}
+.ͼy {font-style: italic;}
+.ͼz {text-decoration: line-through;}
+.ͼ10 {color: #7d8799; text-decoration: underline;}
+.ͼ11 {font-weight: bold; color: #e06c75;}
+.ͼ12 {color: #d19a66;}
+.ͼ13 {color: #98c379;}
+.ͼ14 {color: #ffffff;}</style>
+    </head>
+
+    <body>
+      <div class="cm-editor  ͼo"><div class="cm-scroller"><div class="cm-content"><div class="cm-line">alert("hello")</div></div></div></div>
+  </body>
+  

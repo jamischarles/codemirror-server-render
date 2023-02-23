@@ -1,3 +1,9 @@
+## TODO:
+1. Make it work with lezer only and latest deps. (latest deps: CHECK) Lezer-only?
+2. Make it work minimal client side with just json (maybe fork it, or make a different repo for that use case...)
+
+
+
 # CodeMirror-server-render (CodeMirror 6)
 Renders CodeMirror 6 syntax highlighting as a string so you can use it at build time (ie: blog) or server-side.
 Verified to work with latest CM6 `0.20` themes.
