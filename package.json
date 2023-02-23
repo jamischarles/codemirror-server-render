@@ -1,6 +1,6 @@
 {
   "name": "codemirror-server-render",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Generates CodeMirror 6 markup as a string for server side and build time rendering (SSR).",
   "main": "index.js",
   "type": "module",
